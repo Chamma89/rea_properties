@@ -1,0 +1,22 @@
+$test: red;
+
+.weak {
+  color: $test;
+}
+
+.good {
+  color: green;
+}
+
+.testColor {
+  background-color: #fcfa3b;
+}
+
+.main {
+  width: 5px;
+  border: solid 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  width: 2em;
+}
