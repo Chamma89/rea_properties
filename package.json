@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --hot --env.dev --config config/webpack.config.js",
     "build": "webpack --env.prod -p --config config/webpack.config.js",
-    "test": "NODE_ENV=test mocha --require babel-core/register"
+    "test": "NODE_ENV=test mocha --require babel-core/register",
+    "json:server" : "json-server --watch db.json"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -31,6 +32,7 @@
     "webpack-dev-server": "^2.9.4"
   },
   "dependencies": {
+    "json-server": "^0.12.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   }
