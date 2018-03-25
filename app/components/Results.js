@@ -12,7 +12,12 @@ export default class Results extends React.Component {
 
   onSave(index) {
     console.log("You're clicking Save")
-    var arr = this.props.add(index)
+    if (this.props.status === "Results") {
+      var arr = this.props.add(index)
+    }
+    else {
+      console.log("this is already saved")
+    }
   }
 
   
@@ -40,8 +45,7 @@ export default class Results extends React.Component {
               <tr>
                 <td>{property.price}</td>
               </tr>
-            </tbody>
-  
+            </tbody>  
           )
         }
       </table>
