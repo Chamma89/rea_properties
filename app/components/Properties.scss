@@ -1,28 +1,20 @@
-$test: red;
-
-.weak {
-  color: $test;
-}
-
-.good {
-  color: green;
-}
-
 .testColor {
   background-color: #fcfa3b;
 }
 
 .mainResults {
   margin-top: 20px;
-  width: 5px;
+  width: 30%;
   border: solid 5px rgba(0, 0, 0, 0.5);
   float: left;
+  margin-left: 10%; 
 }
 
 .mainSaved {
-  width: 5px;
+  width: 30%;
   border: solid 5px rgba(0, 0, 0, 0.5);
   float: right;
+  margin-right: 10%;  
 }
 
 .logo {
@@ -38,5 +30,34 @@ $test: red;
 }
 
 .price {
-  color: grey
+  color: rgb(100, 100, 100)
+}
+
+.buttonResults {
+  width: 100%;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.buttonSaved {
+  width: 100%;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.mainResults:hover .buttonResults {
+  opacity: 1;
+  background-color: lightgreen;
+}
+
+.mainSaved:hover .buttonSaved {
+  opacity: 1;
+  background-color: red;
+}
+
+.logoMain {
+  width: 30px;
+  border-radius: 20px;
 }

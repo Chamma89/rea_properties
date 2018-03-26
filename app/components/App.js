@@ -3,6 +3,7 @@ import Results from './Results'
 import Saved from './Saved'
 import _ from 'lodash'
 import './Properties.scss'
+import logo from './image/rea.jpg'
 
 export default class App extends React.Component {
 
@@ -47,7 +48,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Property Coding-Test</h1>
+        <h1><img className="logoMain" src={logo}/> REA Coding-Test</h1>
         <Results  add={this.addProperty} status="Results" property={this.state.property.results}/>
         <br/>
 
