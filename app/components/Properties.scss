@@ -12,9 +12,17 @@ $test: red;
   background-color: #fcfa3b;
 }
 
-.main {
+.mainResults {
+  margin-top: 20px;
   width: 5px;
   border: solid 5px rgba(0, 0, 0, 0.5);
+  float: left;
+}
+
+.mainSaved {
+  width: 5px;
+  border: solid 5px rgba(0, 0, 0, 0.5);
+  float: right;
 }
 
 .logo {
@@ -27,4 +35,8 @@ $test: red;
   font-size: 500px;
   color: white;
   border: 35px solid red;
+}
+
+.price {
+  color: grey
 }

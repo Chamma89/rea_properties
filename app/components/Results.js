@@ -8,6 +8,7 @@ export default class Results extends React.Component {
   constructor(props) {
     super(props)
     this.onSave = this.onSave.bind(this) 
+    this.onRemove = this.onRemove.bind(this)
   }
 
   onSave(index) {
@@ -16,7 +17,17 @@ export default class Results extends React.Component {
       var arr = this.props.add(index)
     }
     else {
-      console.log("this is already saved")
+      onRemove(index)
+    }
+  }
+
+  onRemove(index) {
+    console.log("You're clicking Remove")
+    if (this.props.status === "Saved") {
+      var arr = this.props.remove(index)
+    }
+    else {
+      console.log("Cannot Remove")
     }
   }
 
@@ -26,10 +37,10 @@ export default class Results extends React.Component {
    const property = this.props.property
   
     return (
-      <table className="main">
+      <table className="mainResults">
           <h1>{this.props.status}</h1>
           {console.log(property)}
-        {
+        {                          
           property.map((property, index) =>
 
             <tbody onClick={this.onSave.bind(this, index)} style={{ backgroundColor: property.agency.brandingColors.primary }} index={index} key={index}>

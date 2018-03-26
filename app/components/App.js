@@ -1,5 +1,6 @@
 import React from 'react'
 import Results from './Results'
+import Saved from './Saved'
 import _ from 'lodash'
 import './Properties.scss'
 
@@ -8,6 +9,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props)
     this.addProperty = this.addProperty.bind(this)
+    this.removeProperty = this.removeProperty.bind(this)
     this.state = {
       property: {
         results: [],
@@ -31,7 +33,15 @@ export default class App extends React.Component {
     var arr = this.state.property
     arr.saved.push(newProp)
     this.setState({property: arr})
+  }
 
+  removeProperty(index){
+    var newProp = this.state.property.saved[index]
+    console.log(index)    
+    var arr = this.state.property
+    console.log(arr)
+    arr.saved.splice(index, 1)
+    this.setState({ property: arr })
   }
 
   render() {
@@ -40,7 +50,8 @@ export default class App extends React.Component {
         <h1>Property Coding-Test</h1>
         <Results  add={this.addProperty} status="Results" property={this.state.property.results}/>
         <br/>
-        <Results className="saved" add={this.addProperty} status="Saved" property={this.state.property.saved} />
+
+        <Saved remove={this.removeProperty} className="saved" add={this.addProperty} status="Saved" property={this.state.property.saved}/>
       </div>
     )      
   }
