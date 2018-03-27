@@ -29,18 +29,25 @@ export default class App extends React.Component {
   }
 
   addProperty(index) {
+    var add = true
     var newProp = this.state.property.results[index]
-    console.log(newProp)
     var arr = this.state.property
-    arr.saved.push(newProp)
+
+    for (var key in arr.saved) {
+      var obj = arr.saved[key];
+      if(Number(obj.id) === index + 1){
+        add = false
+      }
+    }
+    if(add){
+      arr.saved.push(newProp) 
+    }
     this.setState({property: arr})
   }
 
   removeProperty(index){
     var newProp = this.state.property.saved[index]
-    console.log(index)    
     var arr = this.state.property
-    console.log(arr)
     arr.saved.splice(index, 1)
     this.setState({ property: arr })
   }
@@ -51,7 +58,6 @@ export default class App extends React.Component {
         <h1><img className="logoMain" src={logo}/> REA Coding-Test</h1>
         <Results  add={this.addProperty} status="Results" property={this.state.property.results}/>
         <br/>
-
         <Saved remove={this.removeProperty} className="saved" add={this.addProperty} status="Saved" property={this.state.property.saved}/>
       </div>
     )      
