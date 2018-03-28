@@ -54,11 +54,11 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div class="main">
         <h1><img className="logoMain" src={logo}/> REA Coding-Test</h1>
         <Results  add={this.addProperty} status="Results" property={this.state.property.results}/>
         <br/>
-        <Saved remove={this.removeProperty} className="saved" add={this.addProperty} status="Saved" property={this.state.property.saved}/>
+        <Saved remove={this.removeProperty} className="saved" add={this.addProperty} status="Saved Properties" property={this.state.property.saved}/>
       </div>
     )      
   }

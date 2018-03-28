@@ -18,6 +18,7 @@ export default class Saved extends React.Component {
 		const property = this.props.property
 
 		return (
+			
 			<table className="mainSaved">
 				<h2>{this.props.status}</h2>
 				{

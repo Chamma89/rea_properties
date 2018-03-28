@@ -16,7 +16,7 @@ export default class Results extends React.Component {
   
   render() {
     const property = this.props.property
-  
+    
     return (
       <table className="mainResults">
         <h2>{this.props.status}</h2>
