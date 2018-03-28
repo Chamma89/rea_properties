@@ -18,7 +18,7 @@ export default class Saved extends React.Component {
 		const property = this.props.property
 
 		return (
-			
+
 			<table className="mainSaved">
 				<h2>{this.props.status}</h2>
 				{
@@ -33,7 +33,7 @@ export default class Saved extends React.Component {
 							<tr>
 								<td className="price">{property.price}</td>
 							</tr>
-							<button onClick={this.onRemove.bind(this, index)}className="buttonSaved">Remove</button>
+							<button onClick={this.onRemove.bind(this, index)} className="buttonSaved">Remove <i class="fas fa-minus-circle"></i></button>
 						</tbody>
 					)
 				}

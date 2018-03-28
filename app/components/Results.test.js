@@ -11,10 +11,10 @@ describe('Results Component', () => {
 		const addState = wrapper.state().addProperty
 		expect(addState).toEqual(0)
 	})
-	
+
 	it('Property data state exists', () => {
 		const wrapper = shallow(<App />)
-		expect(wrapper.state('Results')).to.exist
+		expect(wrapper.state('results')).to.exist
 	})
 })
 

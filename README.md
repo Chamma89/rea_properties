@@ -23,7 +23,6 @@ In order to run the program, you must follow these steps:
 
 ```
 npm install
-
 ```
 2. Run the following two commands to initiate the webpack-dev-server and JSON-Server:
 
@@ -31,14 +30,12 @@ npm install
 npm start - which will have the project running at http://localhost:8080/
 
 npm run json:server - which will have the back-end server running at http://localhost:3000
-
 ```
 
 3. To build and deploy with github pages
 
 ```
 npm run build
-
 ```
 
 ## Technology

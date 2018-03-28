@@ -32,7 +32,7 @@ export default class Results extends React.Component {
               <tr>
                 <td className="price">{property.price}</td>
               </tr>
-              <button onClick={this.onSave.bind(this, index)} className="buttonResults">Add</button>
+              <button onClick={this.onSave.bind(this, index)} className="buttonResults">Add <i class="fas fa-plus-circle"></i></button>
             </tbody>  
           )
         }

@@ -37,6 +37,7 @@
   "dependencies": {
     "json-server": "^0.12.1",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "react-simple-parallax": "^0.2.6"
   }
 }
