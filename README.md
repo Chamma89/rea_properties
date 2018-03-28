@@ -1,45 +1,60 @@
-# webpack react hot reload starter
+# Property Coding Test
 
-All you need, none you don't. 
+## The Aim
 
-Sensible starter with hot reload to try react with webpack 3 that deploys straight to github pages.
+To display the list of properties in a column named "Results" where you can then choose to favourite or save a property and add it to the "Saved" column. You must also be able to remove a saved property from the "Saved" column.
 
-## Based on
+## Design and Implementation
 
-1. Bundler: [Webpack](http://webpack.github.io/docs/), [Babel](https://babeljs.io)
-2. Language: [ES2015](https://babeljs.io/docs/learn-es2015/)
-3. Library: [React](https://reactjs.org/), [Sass](http://sass-lang.com/), [Mocha](https://mochajs.org)
+I wanted to use ReactJS since i have been using it within the last 2 weeks. And also figured that this project would be great practice and it also required the code to be separated into modules. I decided to split my app into 3 modules, App, Results and Saved. Results and Saved being the child component to App. There was no need for the child components to have a state as all the alterations would be made in the parent component(App).
 
-## Usage
+The JSON data is being fetched through a fake REST API using JSON-Server
 
-1. clone this repo
-```
-git clone THIS_GIT_REPO_URL
-```
+## Improvements
 
-2. install dependencies using npm or yarn
+Currently if you hover over the results or saved, all the buttons appear for that column. I would've liked to have had only that particular button appear for the property that is hovered on. I also would've liked to have used an external library to make it look a little prettier. All the SASS/CSS3 at the moment was done by me. 
+
+
+## Getting Started
+
+In order to run the program, you must follow these steps:
+
+1. Install dependencies using npm or yarn
+
 ```
 npm install
+
 ```
-or
+2. Run the following two commands to initiate the webpack-dev-server and JSON-Server:
+
 ```
-yarn install
+npm start - which will have the project running at http://localhost:8080/
+
+npm run json:server - which will have the back-end server running at http://localhost:3000
+
 ```
 
-3. start dev server and start coding in `/app`
-```
-npm start
-```
-
-## build and deploy with github pages
-
-Github pages support hosting your site in a docs directory within your repo. Simply run the following command to build your site into docs directory and update the source setting on github. 
+3. To build and deploy with github pages
 
 ```
 npm run build
+
 ```
 
-## run tests in `/test`
-```
-npm test
-``` 
+## Technology
+
+The following Languages and tools were used:
+
+* ReactJs
+* Webpack
+* JSON Server
+* Babel
+* SASS
+* CSS3
+
+
+## Challenges
+
+I have been using React for about 3 weeks now and i always like the challenge of using a language i have had little experience in. 
+
+I have never done any testing with ReactJS prior to this so using Jest/Enzyme was a good learning hurdle and will definitely come in handy in the future. 
