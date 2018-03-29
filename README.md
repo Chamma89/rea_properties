@@ -8,7 +8,7 @@ To display the list of properties in a column named "Results" where you can then
 
 I wanted to use ReactJS since i have been using it within the last 2 weeks. And also figured that this project would be great practice and it also required the code to be separated into modules. I decided to split my app into 3 modules, App, Results and Saved. Results and Saved being the child component to App. There was no need for the child components to have a state as all the alterations would be made in the parent component(App).
 
-The JSON data is being fetched through a fake REST API using JSON-Server
+The JSON data is being fetched through a fake REST API using JSON-Server.
 
 ## Improvements
 
