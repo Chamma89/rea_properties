@@ -15,7 +15,7 @@ export default class App extends React.Component {
       property: {
         results: [],
         saved: []
-      },
+      }
     }
   }
 
