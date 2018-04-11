@@ -25,7 +25,7 @@ In order to run the program, you must follow these steps:
 ```
 npm install
 ```
-2. Run the following two commands to initiate the webpack-dev-server and JSON-Server:
+2. Run the following two commands simultaneously, in separate tabs, to initiate the webpack-dev-server and JSON-Server:
 
 ```
 npm start - which will have the project running at http://localhost:8080/
